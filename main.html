@@ -27,6 +27,19 @@
   </header>
 
   <main>
+     <script>
+    window.addEventListener("load", function () {
+        alert("Selamat datang di profil Rahma Diva!");
+    });
+    const menuLinks = document.querySelectorAll("nav a");
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            menuLinks.forEach(l => l.classList.remove("aktif"));
+            this.classList.add("aktif");
+        });
+    });
+  </script>
+
     <section class="hero">
       <img src="div.jpg" alt="Foto Diva" />
       <div class="hero-text">
@@ -63,3 +76,4 @@
   </footer>
 </body>
 </html>
+
